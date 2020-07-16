@@ -1,0 +1,88 @@
+{
+    "questions" : [
+        {
+          "id": 1, 
+          "question": "What is Node?",
+          "answer": "Node is a JavaScript runtime that allows you to write scalable backend applications in JavaScript. It’s built on Chromes V8 engine and uses an asynchronous, non-blocking, event-driven architecture, that allows you to write very scalable applications."
+        },
+        {
+          "id": 2, 
+          "question": "How would you prevent a bot from scraping your publicly accessible API?",
+          "answer": "If the data within the API is publicly accessible then, technically, it is not possible to completely prevent data scraping. However, there is an effective solution that will deter most people/bots: rate limiting (also known as throttling). Throttling will prevent a certain device from making a defined number of requests within a defined time. Upon exceeding the defined number of requests, a 429 Too Many Attempts HTTP error should be thrown. Note: It is important to track the device with more than just an IP address as this is not unique to the device and can result in an entire network losing access to an API."
+        },
+        { "id": 3, 
+          "question": "What is TypeScript?",
+          "answer": "TypeScript is a language that wraps JavaScript and adds things like types, classes,  and interfaces to make your development experience easier. The code is easier to navigate and refactor as types make it easier to reason about and tools like Visual Studio Code can give better support for the developer too. Interesting enough; you don’t run TypeScript (normally) but it compiles to idiomatic JavaScript that is then run in your application." 
+        },
+        {
+          "id": 4, 
+          "question": "If a user attempts to create a resource that already exists - for example, an email address that's already registered - what HTTP status code would you return?",
+          "answer": "Although the answer to this is debatable, the widely accepted practice would be to use a 409 Conflict HTTP status code. It would also be acceptable to return a 422 Unprocessable Entity. Some may argue that a 400 Bad Request is acceptable, but we discourage this, since conventionally it implies the server did not understand the request, which in this case is not true."
+        },
+        {
+          "id": 5, 
+          "question": "What is the difference betweeen 'git pull' and 'git fetch'?",
+          "answer": "In the simplest terms, 'git pull' does a 'git fetch' followed by a 'git merge'. 'git fetch' is the command that tells your local git to retrieve the latest meta-data info from the original (yet doesn’t do any file transferring. It’s more like just checking to see if there are any changes available). 'git pull' on the other hand does that AND brings (copy) those changes from the remote repository."
+        },
+        {
+          "id": 6, 
+          "question": "What is Backend?",
+          "answer": "In short: backend is one part of an application that is run on a server. The clients of the application send commands to a common backend that often are responsible for storing and retrieving data from one or more data sources. Backend refers to the type of applications that runs on a server. Other common names are services, server or APIs (Application Programming Interfaces)."
+        },
+        {
+          "id": 7, 
+          "question": "What is HTTP?",
+          "answer": "In short: HTTP is the HyperTextTransfer Protocol and is the basic communication structure for the web. It’s a way to format messages with requests and responses and communicate data over the web. HTTPS (S = secure) refers to encrypted HTTP, to make the exchanging of information harder for someone to steal and tamper with. HTTP stands for HyperText Transfer Protocol and is the way data is most commonly passed across the internet. It’s the protocol that drives and lies behind the success of the world wide web."
+        },
+        {
+          "id": 8, 
+          "question": "What is a Docker container?",
+          "answer": "It is a comprehensive set of applications including all its dependencies which share the same OS kernel, along with the other containers running in separate processes within the operating system in a user space. Docker is not tied to any IT infrastructure, and thus it can run on any computer system or on the cloud. We can create a Docker container using Docker images and then run it, or we can use the images that are already created in the Docker Hub. To simplify things, let us say that the Docker containers are just runtime instances of the Docker image."
+        },
+        {
+          "id": 9, 
+          "question": "What is a foreign key in SQL database?",
+          "answer": "A foreign key is a key used to link two tables together. A forerign key is a field (or collection of fields) in one table that refers to the PRIMARY KEY in another table."
+        },
+        {
+          "id": 10, 
+          "question": "Why can't browsers read JSX?",
+          "answer": "Browsers can only read JavaScript objects but JSX in not a regular JavaScript object. Thus to enable a browser to read JSX, first, we need to transform JSX file into a JavaScript object using JSX transformers like Babel and then pass it to the browser."
+        },
+        {
+          "id": 11, 
+          "question": "What is the difference between Local storage & Session storage?",
+          "answer": "Local Storage – The data is not sent back to the server for every HTTP request (HTML, images, JavaScript, CSS, etc) – reducing the amount of traffic between client and server. It will stay until it is manually cleared through settings or program.Session Storage – It is similar to local storage; the only difference is while data stored in local storage has no expiration time, data stored in session storage gets cleared when the page session ends. Session Storage will leave when the browser is closed."
+        },
+        {
+          "id": 12, 
+          "question": "Where can u find usage of cookies in your development??",
+          "answer": "To maintain authentication details we can make use of authentication cookie. To transmit session id between client and server."
+        },
+        { "id": 13, 
+          "question": "What is Event Loop?",
+          "answer": "Action = it’s an object that describes what happened. Reducer = it is a place to determine how the state will change. Store = state/object tree of the entire application is saved in the Store. View – Simply displays the data provided by the Store." 
+        },
+        {
+          "id": 14, 
+          "question": "List down the components of Redux.",
+          "answer": "Action – It’s an object that describes what happened. Reducer –  It is a place to determine how the state will change. Store – State/ Object tree of the entire application is saved in the Store. View – Simply displays the data provided by the Store."
+        },
+        {
+          "id": 15, 
+          "question": "What will the following code output: (function() { var a = b = 5; })(); console.log(b);",
+          "answer": "The code above will output 5 even though it seems as if the variable was declared within a function and can't be accessed outside of it. This is because var a = b = 5; is interpreted the following way: var a = b; b = 5; But b is not declared anywhere in the function with var so it is set equal to 5 in the global scope."
+        },
+        {
+          "id": 16, 
+          "question": "Make this work: duplicate([1, 2, 3, 4, 5]);     // [1,2,3,4,5,1,2,3,4,5]",
+          "answer": "function duplicate(arr) { return arr.concat(arr);}      duplicate([1, 2, 3, 4, 5]); // [1,2,3,4,5,1,2,3,4,5]."
+        },
+        {
+          "id": 17,
+          "question": "Write a function that would allow you to do this: multiply(5)(6).",
+          "answer": "You can create a closure to keep the value of a even after the inner function is returned. The inner function that is being returned is created within an outer function, making it a closure, and it has access to the variables within the outer function, in this case the variable a. function multiply(a) { return function(b) { return a * b; } } multiply(5)(6);"
+        }
+        
+      ]
+    }
