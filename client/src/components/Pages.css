@@ -1,0 +1,25 @@
+.Pages__content {
+    text-align: center;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    display: block;
+    margin-top: 15px;
+}
+
+.Pages__page {
+    list-style: none;
+    font-size: 30px;
+    border: 1px solid white;
+    padding: 10px 20px;
+}
+
+.Pages__href {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.Pages__list .Pages__page {
+    display: inline;
+}
