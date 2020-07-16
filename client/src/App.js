@@ -18,29 +18,13 @@ const App = () => {
     fetchQuestions();
   }, []);
 
-  // Get current questions
   const lastQuestion = page * questionsOnPage;
   const firstQuestion = lastQuestion - questionsOnPage;
   const displayedQuestions = questions.slice(firstQuestion, lastQuestion);
 
-  // Change page
   const paginate = pageNumber => setPage(pageNumber);
 
-  // componentDidMount() {
-  //   axios.get('/questions')
-  //      .then(res => this.setState({ questions: res.data.questions }))
-  //      .catch(err => console.log(err));
-  // }
-
-  // handleClick = (e, number) => {
-  //   e.preventDefault();
-  //   axios.get(`/questions/${number}`)
-  //   // axios.get('/questions/2')
-  //      .then(res => this.setState({ questions: res.data.questions }))
-  //      .catch(err => console.log(err));
-  // }
-
-  // render () {
+  
   return (
     <div className="App">
         <Header />
@@ -48,8 +32,6 @@ const App = () => {
         <Pages questionsOnPage={questionsOnPage} allQuestions={questions.length} paginate={paginate}/>
     </div>
     );
-  // }
-
 }
 
 export default App;
